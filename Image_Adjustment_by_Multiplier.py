@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 from PIL import Image, features
-# test
+# test 2 is here
 # --- Helper Functions ---
 
 def similar_width(w1, w2, tolerance=10):
