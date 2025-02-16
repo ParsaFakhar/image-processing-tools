@@ -130,7 +130,8 @@ here the structure of the folders <br>
     - final
       - 1.png
       - 2.png
-     
+
+<br>
    ```bash
    python Run_ImageMultiplier_on_ALL_Folders.py /path/to/Collection Folder
   ```
@@ -163,7 +164,7 @@ the script, expect a Folder, with many Manga Folders in them, each Manga Folders
     - chapter 3
       - 1.png
       - 2.png
-
+<br>
 
    ```bash
    python batch_merger.py /path/to/Collection of Mangas
