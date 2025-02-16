@@ -57,6 +57,9 @@ To use this Python script, you need to have Python installed on your system. You
   >useful to be used for Image_Adjustment_by_Multiplier.py later
 
 
+the images have to be in either of these formats '.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp', '.jxl', '.avif' (you can add more in the code)
+
+
 
   the script makes sure, _Anamolies_ are handled (**Using Priority System that you can Change in Code**) as well, as below:<br>
   - Prologue (as last chapter if there is no "chapter" in the begining of the folder's name)
@@ -113,12 +116,59 @@ batch_merger.py runs the "merge_manga.py" on all the Mangas in the folder that i
 Run_ImageMultiplier_on_ALL_Folders.py runs Image_Adjustment_by_Multiplier.py on 
 
 
+## Usage
+
+Run_ImageMultiplier_on_ALL_Folders.py
+this script expect a path to a Folder, the Folder will have multiple Subdirectories, inside each subdirectory HAS TO BE a folder named "final", this final folder will have all the images
+here the structure of the folders <br>
+- Collection Folder
+  - manga1
+    - final
+      - 1.png
+      - 2.png
+  - manga2
+    - final
+      - 1.png
+      - 2.png
+     
+   ```bash
+   python Run_ImageMultiplier_on_ALL_Folders.py /path/to/Collection Folder
+  ```
 
 
+## Usage
+batch_merger.py <br>
+the script, expect a Folder, with many Manga Folders in them, each Manga Folders will have many Chapter Folder, and those Chapter Folders will have images inside them, below is the structure
+
+- Collection of Mangas
+  - manga1
+    - chapter 1
+      - 1.png
+      - 2.png
+      - 3.png
+    - Ch 2
+      - 1.jpg
+      - 2.png
+      - 3.webp
+    - side story
+      - 1.png
+      - 2.png
+  - manga2
+    - chapter 1
+      - 1.png
+      - 2.png
+    - chapter 2
+      - 1.png
+      - 2.png
+    - chapter 3
+      - 1.png
+      - 2.png
 
 
+   ```bash
+   python batch_merger.py /path/to/Collection of Mangas
+  ```
 
 
-
-
-
+> [!IMPORTANT]
+> batch_merger should be in the same place as merge_manga.py
