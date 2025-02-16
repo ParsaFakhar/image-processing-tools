@@ -37,7 +37,7 @@ as you can see, i dropped a big image (2000*2000) in there to make you see what 
 
 ## Usage
 
-To use this Python script, you need to have Python installed on your system. You can run the script from the terminal by providing the path to the folder you want to process as an argument.
+To use this Python script, you need to have Python installed on your system. You can run the script from the terminal by providing the path to the folder you want to process as an argument. and providing the path to the folder that the output will be saved
 
 ### Running the Script
 
@@ -46,7 +46,7 @@ To use this Python script, you need to have Python installed on your system. You
 2. **Run the Script**: Use the following command format to execute the script:
 
    ```bash
-   python Image_Adjustment_by_Multiplier.py /path/to/your/folder/with images
+   python Image_Adjustment_by_Multiplier.py /path/to/your/Input_folder  /path/to/your/Output_folder 
 
   <hr>
 
@@ -69,12 +69,12 @@ To use this Python script, you need to have Python installed on your system. You
   - ch (same as chapter if the name starts with it following numbers)
 
 
-below is an example of how the script works
+below is an example of how the script works, left (before running the script), right (after running the script)
 
 <table>
   <tr>
-    <td><img src="Docs/Images/Chapters.png" alt="Original Image" width="500" /></td>
-    <td><img src="Docs/Images/AfterScript.png" alt="Output Image" width="500" /></td>
+    <td><img src="Docs/Images/Chapters.png" alt="Chapters" width="500" /></td>
+    <td><img src="Docs/Images/AfterScript.png" alt="AfterScript" width="500" /></td>
   </tr>
 </table>
 
@@ -89,11 +89,28 @@ Sorted chapters (with sort keys):
 7. Creator's Note -> (6, 1, 0, "Creator's Note")
 
 
+all the images are now in a new folder called "final", in the same directory that contains all the chapters
 
+## Usage
 
+To use this Python script, you need to have Python installed on your system. You can run the script from the terminal by providing the path to the folder you want to process as an argument.
 
+### Running the Script
 
+1. **Open Terminal**: Navigate to the directory where your script is located.
 
+2. **Run the Script**: Use the following command format to execute the script:
+
+   ```bash
+   python merge_manga.py /path/to/your/folder/with chapters
+
+  <hr>
+
+### 3. Run_ImageMultiplier_on_ALL_Folders.py && batch_merger.py
+these scripts are useful if you have multiple folders and mangas and you don't want to run merge_manga.py or Image_Adjustment_by_Multiplier.py, one by one
+
+batch_merger.py runs the "merge_manga.py" on all the Mangas in the folder that is given as argument
+Run_ImageMultiplier_on_ALL_Folders.py runs Image_Adjustment_by_Multiplier.py on 
 
 
 
