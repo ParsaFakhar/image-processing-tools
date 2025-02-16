@@ -39,7 +39,7 @@ def parse_chapter_info(name):
         return (4, 1, chap, name)
 
     if lower.startswith("creator's note"):
-        return (4, 1, 0, name)
+        return (6, 1, 0, name)
 
     if lower.startswith("prologue"):
         chap_match = re.search(r'prologue\s*\.?\s*(\d+(\.\d+)?)', lower)
