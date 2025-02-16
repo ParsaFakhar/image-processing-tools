@@ -1,6 +1,9 @@
 # Image Processing Tools
 ### 1. Image_Adjustment_by_Multiplier.py
-  this script, makes sure all images have 2.5 times the hieght than width for example to have (720*1800) ---> 1800 = 720 * 2.5
+
+  > _(it is recommanded to use merge_manga.py before using this script)_ <br>
+  
+  this script, makes sure all images have 2.5 (you can change this number in code) times the hieght than width for example to have (720*1800) ---> 1800 = 720 * 2.5 <br>
   it crops and adds from the next image in the folder to the image that is being processed to get the desired height
 
 > [!NOTE]
@@ -44,3 +47,61 @@ To use this Python script, you need to have Python installed on your system. You
 
    ```bash
    python Image_Adjustment_by_Multiplier.py /path/to/your/folder/with images
+
+  <hr>
+
+### 2. merge_manga.py
+  this script, is mostly useful after using HakuNeko app to download full Chapters of a manga, the script take a path of a folder containing all chapters (subdirectories) containing images <br>
+  loops through chapters using **_re_** library (finding the chapters order) <br>
+  and starts naming them using a "counter" that starts from 1, and puts all images in order, in one final folder containing all images of all chapters sequentially
+  >useful to be used for Image_Adjustment_by_Multiplier.py later
+
+
+
+  the script makes sure, _Anamolies_ are handled (**Using Priority System that you can Change in Code**) as well, as below:<br>
+  - Prologue (as last chapter if there is no "chapter" in the begining of the folder's name)
+  - Epilogue (last chapter)
+  - Creator's Note (last chapter)
+  - Side story (considered after the chapters, example: "chapter 40 [final]", "Side story 1", "Side story 2",...)
+  - volume (checks for numbers, if Volume 1, then checks for all sub chapters to list them)
+  - episode (equevelant as "chapter", if "chapter" exist, moves to the last)
+  - oneshot (only 1 chapter)
+  - ch (same as chapter if the name starts with it following numbers)
+
+
+below is an example of how the script works
+
+<table>
+  <tr>
+    <td><img src="Docs/Images/Chapters.png" alt="Original Image" width="500" /></td>
+    <td><img src="Docs/Images/AfterScript.png" alt="Output Image" width="500" /></td>
+  </tr>
+</table>
+
+the images are processed in the following order, with the following priorites
+Sorted chapters (with sort keys):
+1. Chapter 1 -> (1, 1, 1.0, 'Chapter 1')
+2. Chapter 2 -> (1, 1, 2.0, 'Chapter 2')
+3. ch 3 -> (1, 1, 3.0, 'ch 3')
+4. episode 4 -> (1, 1, 4.0, 'episode 4')
+5. Side story 1 -> (5, 1, 1.0, 'Side story 1')
+6. Side story 2 -> (5, 1, 2.0, 'Side story 2')
+7. Creator's Note -> (6, 1, 0, "Creator's Note")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
