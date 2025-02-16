@@ -45,5 +45,6 @@ def main():
         else:
             print(f"Finished processing: {manga}")
 
+
 if __name__ == "__main__":
     main()
