@@ -9,9 +9,11 @@
 > [!NOTE]
 > if the width of the images are significantly different then the merging doesn't happen, instead the image gets ignored UNLESS the next image after that has the same width, the the merging with the new width starts
 
+> [!WARNING]
+> the images have to be either "png", "jpg", "jpeg", "webp", you can add more in the code yourself, also remember that the saved images in Output is in webp for size reduction, Quality = 80, it is NOT LossLess
 
-
-
+> [!WARNING]
+> the script assumes the images are numerically named and sorted, otherwise it will not work as intended
 
 
 
@@ -29,3 +31,16 @@ as you can see, i dropped a big image (2000*2000) in there to make you see what 
     <td><img src="Docs/Images/Output.png" alt="Output Image" width="500" /></td>
   </tr>
 </table>
+
+## Usage
+
+To use this Python script, you need to have Python installed on your system. You can run the script from the terminal by providing the path to the folder you want to process as an argument.
+
+### Running the Script
+
+1. **Open Terminal**: Navigate to the directory where your script is located.
+
+2. **Run the Script**: Use the following command format to execute the script:
+
+   ```bash
+   python Image_Adjustment_by_Multiplier.py /path/to/your/folder/with images
