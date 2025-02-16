@@ -132,6 +132,7 @@ here the structure of the folders <br>
       - 2.png
 
 <br>
+
    ```bash
    python Run_ImageMultiplier_on_ALL_Folders.py /path/to/Collection Folder
   ```
