@@ -29,7 +29,7 @@ def main(collection_path):
             print(f"'output' folder already exists at: {output_folder}")
 
         # Build the command to run DeepSeek_Splitter.py with the required arguments
-        cmd = ["python", "Image_Adjustment_by_Multiplier.py", final_folder, output_folder]
+        cmd = ["python3", "/Users/johanvillibert/PycharmProjects/image-processing-tools/Image_Adjustment_by_Multiplier.py", final_folder, output_folder]
         print(f"Running: {' '.join(cmd)}")
         try:
             subprocess.run(cmd, check=True)

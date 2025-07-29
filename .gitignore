@@ -47,3 +47,6 @@ venv/
 
 
 .DS_Store
+movingDaniasor.py
+pygame_stuff.py
+test.py
