@@ -18,7 +18,7 @@ def main():
     collection_folder = os.path.abspath(args.folder)
     if not os.path.isdir(collection_folder):
         print(f"Error: {collection_folder} is not a directory.")
-        sys.exit(1)
+        sys.test()
 
     # List all subdirectories (each representing a manga)
     manga_folders = [
