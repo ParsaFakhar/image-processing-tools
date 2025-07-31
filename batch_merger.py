@@ -2,7 +2,7 @@
 import os
 import sys
 import argparse
-import subproces
+import subprocess
 
 def main():
     parser = argparse.ArgumentParser(
