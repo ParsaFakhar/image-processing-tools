@@ -50,3 +50,4 @@ venv/
 movingDaniasor.py
 pygame_stuff.py
 test.py
+*.orig
